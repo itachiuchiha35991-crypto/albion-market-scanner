@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Albion Market Scanner</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#111;
+    color:white;
+    padding:15px;
+}
+
+h1,h2{
+    text-align:center;
+}
+
+input,button{
+    padding:10px;
+    margin:5px;
+    border-radius:8px;
+}
+
+button{
+    background:#f0a500;
+    border:0;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid white;
+    padding:8px;
+    text-align:center;
+}
+
+#flipResult{
+    text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>⚔ Albion Market Scanner</h1>
+
+<p style="text-align:center">
+Asia Server Economy Tool
+</p>
+
+
+<h2>Search Item</h2>
+
+<input id="itemName" placeholder="Example: T4_METALBAR">
+
+<button onclick="searchItem()">
+🔍 Search
+</button>
+
+
+
+<h2>🏙 City Prices</h2>
+
+
+<table>
+
+<tr>
+<th>City</th>
+<th>Buy</th>
+<th>Sell</th>
+</tr>
+
+
+<tr>
+<td>Bridgewatch</td>
+<td id="bwBuy">-</td>
+<td id="bwSell">-</td>
+</tr>
+
+
+<tr>
+<td>Martlock</td>
+<td id="mlBuy">-</td>
+<td id="mlSell">-</td>
+</tr>
+
+
+<tr>
+<td>Lymhurst</td>
+<td id="lyBuy">-</td>
+<td id="lySell">-</td>
+</tr>
+
+
+<tr>
+<td>Fort Sterling</td>
+<td id="fsBuy">-</td>
+<td id="fsSell">-</td>
+</tr>
+
+
+<tr>
+<td>Thetford</td>
+<td id="tfBuy">-</td>
+<td id="tfSell">-</td>
+</tr>
+
+
+<tr>
+<td>Caerleon</td>
+<td id="clBuy">-</td>
+<td id="clSell">-</td>
+</tr>
+
+
+</table>
+
+
+
+<h2>🔥 Best Flip</h2>
+
+<h3 id="flipResult">
+Search an item to find profit
+</h3>
+
+
+
+<h2>💰 Profit Calculator</h2>
+
+
+<input id="buyPrice" type="number" placeholder="Buy Price">
+
+<input id="sellPrice" type="number" placeholder="Sell Price">
+
+<input id="quantity" type="number" placeholder="Quantity">
+
+<input id="returnRate" type="number" placeholder="Return Rate %">
+
+<input id="tax" type="number" placeholder="Tax %">
+
+
+<br>
+
+<button onclick="calculateProfit()">
+Calculate
+</button>
+
+
+<h3 id="profitResult">
+Profit: -
+</h3>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
